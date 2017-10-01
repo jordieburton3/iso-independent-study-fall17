@@ -31,3 +31,17 @@ extension Sequence {
         return result
     }
 }
+
+class Question {
+    var mQuery: String;
+    var mAnswer: String;
+    var mAnswerChoices: [String];
+    var mAnswerIndex: Int;
+    
+    init (_ query:String, answer: String, answerChoices: [String]) {
+        self.mQuery = query;
+        self.mAnswer = answer;
+        self.mAnswerChoices = answerChoices;
+        self.mAnswerIndex = 0;
+    }
+}
