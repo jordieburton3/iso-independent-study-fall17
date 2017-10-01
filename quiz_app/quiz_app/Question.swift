@@ -42,6 +42,22 @@ class Question {
         self.mQuery = query;
         self.mAnswer = answer;
         self.mAnswerChoices = answerChoices;
-        self.mAnswerIndex = 0;
+        mAnswerChoices.shuffle();
+        mAnswerIndex = 0;
+        findAnswer();
+    }
+    
+    func shuffle() {
+        mAnswerChoices.shuffle();
+        findAnswer();
+    }
+    
+    //MARK: Private functions.
+    private func findAnswer() {
+        for index in 0..<mAnswerChoices.count {
+            if (mAnswerChoices[index] == mAnswer) {
+                mAnswerIndex = index;
+            }
+        }
     }
 }
