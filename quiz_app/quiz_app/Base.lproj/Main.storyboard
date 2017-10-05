@@ -20,12 +20,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="T52-qz-ZTv"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" text="Welcome to Jordan's Independent Study iOS Quiz App!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xaZ-Jv-n4I">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="T52-qz-ZTv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="7Jq-vS-vD1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="T52-qz-ZTv" secondAttribute="trailing" constant="38" id="C9g-Zh-7pL"/>
                             <constraint firstItem="T52-qz-ZTv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="MEz-0h-kSM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xaZ-Jv-n4I" secondAttribute="trailing" constant="45" id="NOp-Fc-8G7"/>
+                            <constraint firstItem="xaZ-Jv-n4I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="58" id="iZo-Sz-hDY"/>
+                            <constraint firstItem="xaZ-Jv-n4I" firstAttribute="top" secondItem="T52-qz-ZTv" secondAttribute="bottom" constant="8" id="n35-Jg-2uT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nZh-zL-FGH"/>
