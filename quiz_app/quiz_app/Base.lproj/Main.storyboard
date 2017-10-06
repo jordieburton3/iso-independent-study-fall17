@@ -28,7 +28,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKc-HO-15b">
                                 <state key="normal" title="Take Quiz!"/>
                                 <connections>
-                                    <segue destination="wad-v0-aod" kind="presentation" id="PfA-rO-hHb"/>
+                                    <segue destination="wad-v0-aod" kind="show" id="7MA-70-OZb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="1074.4000000000001" y="185.75712143928038"/>
         </scene>
-        <!--View Controller-->
+        <!--Quiz View Controller-->
         <scene sceneID="tud-vc-z7s">
             <objects>
-                <viewController id="wad-v0-aod" sceneMemberID="viewController">
+                <viewController id="wad-v0-aod" customClass="QuizViewController" customModule="quiz_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DXq-0A-K6m"/>
                         <viewControllerLayoutGuide type="bottom" id="3ld-Mj-brR"/>
@@ -64,10 +64,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="O5o-Af-dxZ">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="1rT-OL-kiE">
+                            <connections>
+                                <action selector="goBack:" destination="wad-v0-aod" id="oVh-pF-Rd3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mH-GX-9Bc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2249" y="186"/>
+            <point key="canvasLocation" x="3188" y="185.75712143928038"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7KK-js-ccC">
@@ -87,8 +94,29 @@
             </objects>
             <point key="canvasLocation" x="132" y="791.15442278860576"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VT7-dS-n0o">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uut-wG-mhD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zaO-ot-Gvv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wad-v0-aod" kind="relationship" relationship="rootViewController" id="YKY-Ol-r5a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CMC-PK-um8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3188" y="-940"/>
+        </scene>
     </scenes>
     <resources>
         <image name="welcomeIcon" width="250" height="125"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="7MA-70-OZb"/>
+    </inferredMetricsTieBreakers>
 </document>

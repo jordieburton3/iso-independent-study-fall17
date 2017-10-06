@@ -22,7 +22,7 @@ class QuizViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -30,6 +30,16 @@ class QuizViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+ 
+    @IBAction func goBack(_ sender: UIBarButtonItem) {
+         print("I like cake");
+        _ = self.navigationController?.popViewController(animated: true);
+
+    }
+    
+    func back(sender: UIBarButtonItem) {
+        _ = self.navigationController?.popViewController(animated: true);
+
+    }
 
 }
