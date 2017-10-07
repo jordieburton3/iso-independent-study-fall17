@@ -10,6 +10,9 @@ import UIKit
 
 class QuizViewController: UIViewController {
 
+    @IBOutlet weak var mQueryText: UITextView!
+    @IBOutlet weak var mAnswerTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
