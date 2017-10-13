@@ -36,6 +36,10 @@ class Quiz {
         }
     }
     
+    func getCurrentQuestion() -> Question {
+        return mQuestions[mCurrentIndex];
+    }
+    
     func getNextQuestion() {
         mQuestion = mQuestions[mCurrentIndex];
         mCurrentIndex = mCurrentIndex + 1;
@@ -43,6 +47,9 @@ class Quiz {
         
     }
     
+    func getChoice(index: Int) -> String {
+        return mQuestion.getChoice(pos: index);
+    }
     
     func isCorrect(row: Int) -> Bool {
         let correct = mQuestion.isCorrect(selection: row);

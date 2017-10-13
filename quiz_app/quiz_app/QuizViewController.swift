@@ -8,17 +8,32 @@
 
 import UIKit
 
-class QuizViewController: UITableViewController {
+class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    //MARK: Properties
+    var mQuiz: Quiz!;
+    var mQuestion: Question!;
+    let cellReuseIdentifier = "AnswerCell";
+    
+    // MARK: Outlets
+    
     @IBOutlet weak var mTableView: UITableView!
-    @IBOutlet weak var mQueryView: UITextView!
-    @IBOutlet weak var mQueryText: UITextView!
-    @IBOutlet weak var mAnswerTable: UITableView!
+    @IBOutlet weak var mQuestionQuery: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        mQuiz = Quiz();
+        mQuiz.getNextQuestion();
+        // Do any additional setup after loading the view.
+        //self.MTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier);
+        
+        // This view controller itself will provide the delegate methods and row data for the table view.
+        self.mTableView.delegate = self;
+        self.mTableView.dataSource = self;
+        self.mTableView.tableFooterView = UIView();
+        mQuestionQuery.text = mQuiz.getCurrentQuestion().mQuery;
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +42,22 @@ class QuizViewController: UITableViewController {
     }
     
 
+    // MARK: TableView Data Source Methods
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cellIdentifier = "AnswerChoice";
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? AnswerTableCell  else {
+            fatalError("The dequeued cell is not an instance of AnswerChoiceTableViewCell.");
+        };
+        cell.mAnswerText.text = mQuiz.getChoice(index: indexPath.row);
+        // Configure the cell...
+        
+        return cell;
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection: Int) -> Int {
+        return mQuiz.getCurrentQuestion().getNumAnswers();
+    }
     
     // MARK: - Navigation
 

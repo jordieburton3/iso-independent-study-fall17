@@ -67,6 +67,28 @@
                                 <frame key="frameInset" minX="16" minY="307" width="343" height="313"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnswerChoice" id="lDR-ih-Ct8" customClass="AnswerTableCell" customModule="quiz_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lDR-ih-Ct8" id="yp2-p2-f9s">
+                                            <frame key="frameInset" width="343" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Filler Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kdj-mO-Zjq">
+                                                    <frame key="frameInset" minX="8" width="335" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mAnswerText" destination="kdj-mO-Zjq" id="wiC-3R-oLg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Filler Text" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MII-Rk-cHL">
                                 <frame key="frameInset" minX="16" minY="159" width="343" height="140"/>
@@ -86,10 +108,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="mAnswerTable" destination="Z39-Mb-RFs" id="N1e-oa-Uv5"/>
-                        <outlet property="mQueryText" destination="MII-Rk-cHL" id="4F3-ip-fIp"/>
-                        <outlet property="mQueryView" destination="MII-Rk-cHL" id="Be7-zp-vF3"/>
-                        <outlet property="mTableView" destination="Z39-Mb-RFs" id="J9v-2q-qfe"/>
+                        <outlet property="mQuestionQuery" destination="MII-Rk-cHL" id="mrD-LL-AC7"/>
+                        <outlet property="mTableView" destination="Z39-Mb-RFs" id="Dzq-A2-Fj5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mH-GX-9Bc" userLabel="First Responder" sceneMemberID="firstResponder"/>
