@@ -8,8 +8,10 @@
 
 import UIKit
 
-class QuizViewController: UIViewController {
+class QuizViewController: UITableViewController {
 
+    @IBOutlet weak var mTableView: UITableView!
+    @IBOutlet weak var mQueryView: UITextView!
     @IBOutlet weak var mQueryText: UITextView!
     @IBOutlet weak var mAnswerTable: UITableView!
     

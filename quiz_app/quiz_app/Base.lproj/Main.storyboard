@@ -88,6 +88,8 @@
                     <connections>
                         <outlet property="mAnswerTable" destination="Z39-Mb-RFs" id="N1e-oa-Uv5"/>
                         <outlet property="mQueryText" destination="MII-Rk-cHL" id="4F3-ip-fIp"/>
+                        <outlet property="mQueryView" destination="MII-Rk-cHL" id="Be7-zp-vF3"/>
+                        <outlet property="mTableView" destination="Z39-Mb-RFs" id="J9v-2q-qfe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mH-GX-9Bc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -135,6 +137,6 @@
         <image name="welcomeIcon" width="250" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7MA-70-OZb"/>
+        <segue reference="YKY-Ol-r5a"/>
     </inferredMetricsTieBreakers>
 </document>

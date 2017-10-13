@@ -53,6 +53,30 @@ class Question {
         findAnswer();
     }
     
+    func isCorrect(selection: Int) -> Bool{
+        if selection == mAnswerIndex {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    func isCorrect(choice: String) -> Bool {
+        if (choice == mAnswer) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    func getNumAnswers() -> Int {
+        return mAnswerChoices.count;
+    }
+    
+    func getChoice(pos: Int) -> String {
+        return mAnswerChoices[pos];
+    }
+    
     //MARK: Private functions.
     private func findAnswer() {
         for index in 0..<mAnswerChoices.count {
