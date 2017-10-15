@@ -60,6 +60,15 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return mQuiz.getCurrentQuestion().getNumAnswers();
     }
     
+    // MARK: TableView Delegate Methods
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath){
+        mTableView.deselectRow(at: indexPath, animated: true);
+        if (mQuiz.getCurrentQuestion().isCorrect(selection: indexPath.row)) {
+            print("true");
+        }
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
