@@ -22,6 +22,7 @@ class Quiz {
         mQuestions = [q1, q2, q3];
         mCurrentIndex = 0;
         mNumberCorrect = 0;
+        mQuestions.shuffle();
         hasMoreQuestions = true;
         mQuestion = mQuestions[0];
     }

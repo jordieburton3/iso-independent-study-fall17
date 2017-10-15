@@ -25,7 +25,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         // Do any additional setup after loading the view.
         mQuiz = Quiz();
-        mQuiz.getNextQuestion();
+        //mQuiz.getNextQuestion();
         // Do any additional setup after loading the view.
         //self.MTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier);
         
@@ -49,6 +49,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? AnswerTableCell  else {
             fatalError("The dequeued cell is not an instance of AnswerChoiceTableViewCell.");
         };
+        print("\(indexPath.row)");
         cell.mAnswerText.text = mQuiz.getChoice(index: indexPath.row);
         // Configure the cell...
         
@@ -69,6 +70,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
  
     @IBAction func goBack(_ sender: UIBarButtonItem) {
          print("I like cake");
+        mQuiz.reset();
         _ = self.navigationController?.popViewController(animated: true);
 
     }
