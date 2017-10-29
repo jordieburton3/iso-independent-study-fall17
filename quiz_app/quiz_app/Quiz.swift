@@ -42,10 +42,12 @@ class Quiz {
     }
     
     func getNextQuestion() {
-        mQuestion = mQuestions[mCurrentIndex];
-        mCurrentIndex = mCurrentIndex + 1;
-        hasMoreQuestions = mCurrentIndex < mQuestions.count;
-        
+        if (hasMoreQuestions) {
+            mCurrentIndex = mCurrentIndex + 1;
+            mQuestion = mQuestions[mCurrentIndex];
+            print("\(mCurrentIndex + 1 < mQuestions.count)");
+            hasMoreQuestions = mCurrentIndex + 1 < mQuestions.count;
+        }
     }
     
     func getChoice(index: Int) -> String {

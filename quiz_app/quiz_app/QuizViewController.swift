@@ -67,6 +67,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if (mQuiz.getCurrentQuestion().isCorrect(selection: indexPath.row)) {
             print("true");
         }
+        updateQuestion();
     }
     
     // MARK: - Navigation
@@ -78,7 +79,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
  
     @IBAction func goBack(_ sender: UIBarButtonItem) {
-         print("I like cake");
+        print("I like cake");
         mQuiz.reset();
         _ = self.navigationController?.popViewController(animated: true);
 
@@ -87,6 +88,14 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func back(sender: UIBarButtonItem) {
         _ = self.navigationController?.popViewController(animated: true);
 
+    }
+    
+    // MARK: Private Methods
+    
+    private func updateQuestion() {
+        mQuiz.getNextQuestion();
+        mQuestionQuery.text = mQuiz.getCurrentQuestion().mQuery;
+        mTableView.reloadData();
     }
 
 }
