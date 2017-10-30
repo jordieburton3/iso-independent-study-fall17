@@ -42,12 +42,9 @@ class Quiz {
     }
     
     func getNextQuestion() {
-        if (hasMoreQuestions) {
             mCurrentIndex = mCurrentIndex + 1;
             mQuestion = mQuestions[mCurrentIndex];
-            print("\(mCurrentIndex + 1 < mQuestions.count)");
             hasMoreQuestions = mCurrentIndex + 1 < mQuestions.count;
-        }
     }
     
     func getChoice(index: Int) -> String {
@@ -56,7 +53,7 @@ class Quiz {
     
     func isCorrect(row: Int) -> Bool {
         let correct = mQuestion.isCorrect(selection: row);
-        if correct {
+        if (correct) {
             mNumberCorrect = mNumberCorrect + 1;
         }
         return correct;

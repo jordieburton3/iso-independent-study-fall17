@@ -126,6 +126,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mQuestionQuery" destination="MII-Rk-cHL" id="mrD-LL-AC7"/>
+                        <outlet property="mScore" destination="o8g-nT-gSF" id="dxE-w0-JSx"/>
                         <outlet property="mTableView" destination="Z39-Mb-RFs" id="Dzq-A2-Fj5"/>
                     </connections>
                 </viewController>

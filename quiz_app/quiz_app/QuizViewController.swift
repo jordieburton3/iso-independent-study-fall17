@@ -19,6 +19,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var mTableView: UITableView!
     @IBOutlet weak var mQuestionQuery: UITextView!
+    @IBOutlet weak var mScore: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.mTableView.dataSource = self;
         self.mTableView.tableFooterView = UIView();
         mQuestionQuery.text = mQuiz.getCurrentQuestion().mQuery;
+        mScore.text = "0/0";
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,7 +51,6 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? AnswerTableCell  else {
             fatalError("The dequeued cell is not an instance of AnswerChoiceTableViewCell.");
         };
-        print("\(indexPath.row)");
         cell.mAnswerText.text = mQuiz.getChoice(index: indexPath.row);
         // Configure the cell...
         
@@ -64,10 +65,11 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath){
         mTableView.deselectRow(at: indexPath, animated: true);
-        if (mQuiz.getCurrentQuestion().isCorrect(selection: indexPath.row)) {
-            print("true");
+        if (mQuiz.isCorrect(row: indexPath.row)) {
+            
         }
         updateQuestion();
+        updateScore();
     }
     
     // MARK: - Navigation
@@ -79,7 +81,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
  
     @IBAction func goBack(_ sender: UIBarButtonItem) {
-        print("I like cake");
+        
         mQuiz.reset();
         _ = self.navigationController?.popViewController(animated: true);
 
@@ -91,6 +93,10 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     // MARK: Private Methods
+    
+    private func updateScore() {
+        mScore.text = "\(mQuiz.mNumberCorrect)/\(mQuiz.mCurrentIndex)";
+    }
     
     private func updateQuestion() {
         mQuiz.getNextQuestion();
