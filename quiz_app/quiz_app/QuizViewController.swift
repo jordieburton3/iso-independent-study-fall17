@@ -65,11 +65,13 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath){
         mTableView.deselectRow(at: indexPath, animated: true);
-        if (mQuiz.isCorrect(row: indexPath.row)) {
-            
+        _ = mQuiz.isCorrect(row: indexPath.row);
+        if (mQuiz.hasMoreQuestions) {
+            updateQuestion();
+            updateScore();
+        } else {
+            self.performSegue(withIdentifier: "gameIsDone", sender: self);
         }
-        updateQuestion();
-        updateScore();
     }
     
     // MARK: - Navigation
@@ -78,6 +80,13 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "gameIsDone") {
+            guard let destinationVC = segue.destination as? EndGameViewController else {
+                fatalError("Where do you think you're going???");
+            }
+            destinationVC.mQuiz = self.mQuiz;
+            destinationVC.delegate = "";
+        }
     }
  
     @IBAction func goBack(_ sender: UIBarButtonItem) {

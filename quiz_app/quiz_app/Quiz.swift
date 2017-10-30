@@ -59,5 +59,8 @@ class Quiz {
         return correct;
     }
     
+    func size() -> Int {
+        return mQuestions.count;
+    }
     
 }

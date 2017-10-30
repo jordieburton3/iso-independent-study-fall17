@@ -128,11 +128,69 @@
                         <outlet property="mQuestionQuery" destination="MII-Rk-cHL" id="mrD-LL-AC7"/>
                         <outlet property="mScore" destination="o8g-nT-gSF" id="dxE-w0-JSx"/>
                         <outlet property="mTableView" destination="Z39-Mb-RFs" id="Dzq-A2-Fj5"/>
+                        <segue destination="cwM-3f-ohg" kind="presentation" identifier="gameIsDone" id="ENK-ip-IlZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mH-GX-9Bc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2845.5999999999999" y="104.7976011994003"/>
+            <point key="canvasLocation" x="2780" y="105"/>
+        </scene>
+        <!--End Game View Controller-->
+        <scene sceneID="Oba-iK-Fw0">
+            <objects>
+                <viewController id="cwM-3f-ohg" customClass="EndGameViewController" customModule="quiz_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E9d-l8-03h"/>
+                        <viewControllerLayoutGuide type="bottom" id="td8-Mg-cac"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lHT-U1-mzk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Itg-CY-WSX">
+                                <frame key="frameInset" minX="67" minY="146" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="t3B-NC-ja6">
+                                <frame key="frameInset" minX="67" minY="282" width="240" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQL-iX-leE">
+                                <frame key="frameInset" minX="67" minY="353" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgain:" destination="cwM-3f-ohg" eventType="touchUpInside" id="0sE-WK-Ag9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W33-mw-yMq">
+                                <frame key="frameInset" minX="67" minY="404" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Quit"/>
+                                <connections>
+                                    <action selector="quit:" destination="cwM-3f-ohg" eventType="touchUpInside" id="OH9-un-4K9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5il-ti-7Ut"/>
+                    <connections>
+                        <outlet property="mFinalScore" destination="t3B-NC-ja6" id="qai-zD-uoG"/>
+                        <outlet property="mFinishMessage" destination="Itg-CY-WSX" id="WQ0-IG-jqk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dhc-sM-tJl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3983.1999999999998" y="104.7976011994003"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7KK-js-ccC">
@@ -170,11 +228,30 @@
             </objects>
             <point key="canvasLocation" x="3188" y="-940"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iB4-jB-ce7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cK8-bd-qbm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KHe-RB-8ZT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cwM-3f-ohg" kind="relationship" relationship="rootViewController" id="tUq-DR-PsS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yUp-Pt-XmV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5300" y="-1144"/>
+        </scene>
     </scenes>
     <resources>
         <image name="welcomeIcon" width="250" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7MA-70-OZb"/>
+        <segue reference="ENK-ip-IlZ"/>
     </inferredMetricsTieBreakers>
 </document>
