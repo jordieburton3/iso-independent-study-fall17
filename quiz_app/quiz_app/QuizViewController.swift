@@ -8,7 +8,7 @@
 
 import UIKit
 
-class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FinishedOptions {
 
     //MARK: Properties
     var mQuiz: Quiz!;
@@ -85,20 +85,33 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 fatalError("Where do you think you're going???");
             }
             destinationVC.mQuiz = self.mQuiz;
-            destinationVC.delegate = "";
+            destinationVC.delegate = self;
         }
     }
  
     @IBAction func goBack(_ sender: UIBarButtonItem) {
-        
         mQuiz.reset();
         _ = self.navigationController?.popViewController(animated: true);
-
     }
     
     func back(sender: UIBarButtonItem) {
         _ = self.navigationController?.popViewController(animated: true);
 
+    }
+    
+    // MARK: FinishedOptions methods
+    
+    func writeBackValue(value: String) {
+        if (value == "playAgain") {
+            mQuiz.reset();
+            mQuestionQuery.text = mQuiz.getCurrentQuestion().mQuery;
+            mScore.text = "0/0";
+            mTableView.reloadData();
+        } else if (value == "quit") {
+            _ = self.navigationController?.popViewController(animated: true);
+        } else {
+            fatalError("Not a valid option");
+        }
     }
     
     // MARK: Private Methods

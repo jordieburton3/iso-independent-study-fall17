@@ -14,7 +14,7 @@ class EndGameViewController: UIViewController {
     @IBOutlet weak var mFinalScore: UITextView!
     
     var mQuiz: Quiz?;
-    var delegate: String?;
+    var delegate: FinishedOptions?;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,11 +48,13 @@ class EndGameViewController: UIViewController {
     
     
     @IBAction func playAgain(_ sender: UIButton) {
-        
+        delegate?.writeBackValue(value: "playAgain");
+        self.dismiss(animated: true, completion: nil);
     }
     
     @IBAction func quit(_ sender: UIButton) {
-        
+        delegate?.writeBackValue(value: "quit");
+        self.dismiss(animated: true, completion: nil);
     }
     
 

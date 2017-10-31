@@ -35,6 +35,7 @@ class Quiz {
         for var q in mQuestions {
             q.shuffle();
         }
+        mQuestion = mQuestions[mCurrentIndex];
     }
     
     func getCurrentQuestion() -> Question {
