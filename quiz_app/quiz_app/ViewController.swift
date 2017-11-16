@@ -16,7 +16,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         populateQuizMap();
-        print(quizzes);
+        print(quizzes["film"]!);
+        QuizParser.parseJson(quizzes["film"]!);
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,7 +41,7 @@ class ViewController: UIViewController {
         while let element = enumerator.nextObject() as? String {
             if element.hasSuffix("quiz.json") {
                 let filename = URL(fileURLWithPath: element).lastPathComponent.replacingOccurrences(of: "_quiz.json", with: "");
-                quizzes[filename] = element;
+                quizzes[filename] = "\(path)/\(element)";
                 
             }
         }

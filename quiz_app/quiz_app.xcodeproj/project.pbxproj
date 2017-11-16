@@ -136,12 +136,12 @@
 				3A93C5D71FA7E9C100C27072 /* EndGameViewController.swift */,
 				3A771DBD1F817794001268A3 /* Question.swift */,
 				3A771DC21F88261A001268A3 /* Quiz.swift */,
+				3AA3A6AF1FBDFE1900A12A69 /* QuizParser.swift */,
 				3A93C5D91FA8019B00C27072 /* FinishedOptions.swift */,
 				3AD854141F7AAF6F002F2730 /* Main.storyboard */,
 				3AD854171F7AAF6F002F2730 /* Assets.xcassets */,
 				3AD854191F7AAF6F002F2730 /* LaunchScreen.storyboard */,
 				3AD8541C1F7AAF6F002F2730 /* Info.plist */,
-				3AA3A6AF1FBDFE1900A12A69 /* QuizParser.swift */,
 			);
 			path = quiz_app;
 			sourceTree = "<group>";
