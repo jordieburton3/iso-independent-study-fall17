@@ -26,18 +26,6 @@ class Quiz {
         mQuestions.shuffle();
         hasMoreQuestions = true;
         mQuestion = mQuestions[0];
-        var count = 0;
-        let fileManager = FileManager.default
-        let path = getFilePath();
-        let enumerator:FileManager.DirectoryEnumerator = fileManager.enumerator(atPath: path)!;
-        
-        while let element = enumerator.nextObject() as? String {
-            if element.hasSuffix("quiz.json") {
-                print(element);
-                count += 1;
-            }
-        }
-        print(count);
     }
     
     func reset() {

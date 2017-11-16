@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "quiz_app/Quiz.swift"
-            timestampString = "532544755.584197"
+            timestampString = "532546529.474146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "reset()"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "quiz_app/Quiz.swift"
-            timestampString = "532379769.948589"
+            timestampString = "532546529.474146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "quiz_app/Quiz.swift"
-            timestampString = "532544755.584197"
+            timestampString = "532546529.474146"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "getNextQuestion()"
             landmarkType = "7">
          </BreakpointContent>
