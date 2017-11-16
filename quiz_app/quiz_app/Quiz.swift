@@ -6,7 +6,8 @@
 //  Copyright © 2017 Jordan Burton. All rights reserved.
 //
 
-import Foundation
+import Foundation;
+import SwiftyJSON;
 
 class Quiz {
     var mQuestions: [Question];
@@ -25,6 +26,18 @@ class Quiz {
         mQuestions.shuffle();
         hasMoreQuestions = true;
         mQuestion = mQuestions[0];
+        var count = 0;
+        let fileManager = FileManager.default
+        let path = getFilePath();
+        let enumerator:FileManager.DirectoryEnumerator = fileManager.enumerator(atPath: path)!;
+        
+        while let element = enumerator.nextObject() as? String {
+            if element.hasSuffix("quiz.json") {
+                print(element);
+                count += 1;
+            }
+        }
+        print(count);
     }
     
     func reset() {
@@ -63,5 +76,14 @@ class Quiz {
     func size() -> Int {
         return mQuestions.count;
     }
+    
+    // MARK: Private Methods
+    
+    private func getFilePath(path: String = #file) -> String {
+        let url = URL(fileURLWithPath: path);
+        let newUrl = url.deletingLastPathComponent();
+        return newUrl.path;
+    }
+    
     
 }

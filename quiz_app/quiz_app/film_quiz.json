@@ -1,0 +1,30 @@
+{
+    "title":"best picture winners",
+    "genre":"entertainment",
+    "questions" :
+    [
+     {
+     "query": "What film won best picture in 2015?",
+     "correct_answer": "Spotlight",
+     "wrong_answers" : ["The Big Short","Birdge of Spies", "Brooklyn",
+                        "Mad Max: Fury Road", "The Martian", "The Revenant",
+                        "Room"]
+     
+     },
+     {
+     "query": "Which film won best picture in 2014",
+     "correct_answer": "Birdman",
+     "wrong_answers" : ["American Sniper", "Boyhood",
+                        "The Grand Budapest Hotel", "The Imitation Game",
+                        "Selma", "The Theory of Everything", "Whiplash"]
+     
+     },
+     {
+     "query": "Which film won best picture in 2013?",
+     "correct_answers": "12 Years a Slave",
+     "wrong_answers" : ["American Hustle", "Captain Phillips",
+                        "Dalls Buyers Club", "Gravity", "Her", "Nebraska",
+                        "Philomena", "The Wolf of Wall Street"]
+     }
+     ]
+}
