@@ -25,7 +25,7 @@ class QuizViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        mQuiz = Quiz();
+        //mQuiz = Quiz();
         //mQuiz.getNextQuestion();
         // Do any additional setup after loading the view.
         //self.MTableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier);

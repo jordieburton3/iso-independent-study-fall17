@@ -15,12 +15,23 @@ class QuizParser {
         
     }
     
-    static func parseJson(_ file: String) {
+    static func parseJson(_ file: String) -> Quiz{
         guard let jsonData = try? Data(contentsOf: URL(fileURLWithPath: file)) else {
             fatalError("path not valid");
         };
         let json = JSON(data: jsonData);
         print(json);
+        var questionList = [Question]();
+        let questions =  json["questions"].arrayValue;
+        for question in questions {
+            let query = question["query"].stringValue;
+            let correctAnswer = question["correct_answer"].stringValue;
+            let wrongAnswers = question["wrong_answers"].arrayValue.map({$0.stringValue});
+            let newQuestion = Question(query, answer: correctAnswer, answerChoices: wrongAnswers);
+            questionList.append(newQuestion);
+        }
+        let newQuiz = Quiz(questionList);
+        return newQuiz;
     }
     
 }

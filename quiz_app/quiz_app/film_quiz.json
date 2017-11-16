@@ -21,7 +21,7 @@
      },
      {
      "query": "Which film won best picture in 2013?",
-     "correct_answers": "12 Years a Slave",
+     "correct_answer": "12 Years a Slave",
      "wrong_answers" : ["American Hustle", "Captain Phillips",
                         "Dalls Buyers Club", "Gravity", "Her", "Nebraska",
                         "Philomena", "The Wolf of Wall Street"]

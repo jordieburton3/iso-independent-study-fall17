@@ -28,6 +28,15 @@ class Quiz {
         mQuestion = mQuestions[0];
     }
     
+    init(_ questions: [Question]) {
+        mQuestions = questions;
+        mCurrentIndex = 0;
+        mNumberCorrect = 0;
+        mQuestions.shuffle();
+        hasMoreQuestions = true;
+        mQuestion = mQuestions[0];
+    }
+    
     func reset() {
         mCurrentIndex = 0;
         mNumberCorrect = 0;
