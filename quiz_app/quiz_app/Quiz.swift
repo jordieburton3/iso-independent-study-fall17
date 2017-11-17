@@ -29,6 +29,7 @@ class Quiz {
     }
     
     init(_ questions: [Question]) {
+        print(questions);
         mQuestions = questions;
         mCurrentIndex = 0;
         mNumberCorrect = 0;

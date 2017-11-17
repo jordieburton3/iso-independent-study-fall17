@@ -1,0 +1,31 @@
+{
+    "title":"Track Basics",
+    "genre":"Sports",
+    "questions" :
+    [
+     {
+     "query": "Who has the 800m world record?",
+     "correct_answer": "David Rudisha",
+     "wrong_answers" : ["Usain Bolt", "Hassan Mead",
+                        "Nijel Amos"]
+     
+     },
+     {
+     "query": "Which of these events is run outdoors as per the IAAF?",
+     "correct_answer": "1500m",
+     "wrong_answers" : ["700m", "1600m",
+                        "1000m", "Two-mile",
+                        "880y"]
+     },
+     {
+     "query": "What is the primary governing body of track and field?",
+     "correct_answer": "IAAF",
+     "wrong_answers" : ["USTFCCCA", "NCAA"]
+     },
+     {
+     "query": "How often is the Olympics?",
+     "correct_answer": "Once every 4 years",
+     "wrong_answers": ["Once a year", "Once every 2 year", "Once every 3 years", "Once every 5 years"]
+     }
+     ]
+}

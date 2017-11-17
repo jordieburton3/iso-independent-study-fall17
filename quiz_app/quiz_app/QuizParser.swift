@@ -15,7 +15,8 @@ class QuizParser {
         
     }
     
-    static func parseJson(_ file: String) -> Quiz{
+    static func parseJson(_ file: String) -> Quiz {
+        print(file);
         guard let jsonData = try? Data(contentsOf: URL(fileURLWithPath: file)) else {
             fatalError("path not valid");
         };

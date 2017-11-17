@@ -39,9 +39,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? QuizChoiceTableViewCell  else {
             fatalError("The dequeued cell is not an instance of QuizChoiceTableViewCell.");
         };
-        print("start");
-        print(quizNames[indexPath.row]);
-        print("end");
+        //print("start");
+        //print(quizNames[indexPath.row]);
+        //print("end");
         cell.mQuizChoiceText.text = quizNames[indexPath.row];
         // Configure the cell...
         
@@ -56,6 +56,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath){
         mTableView.deselectRow(at: indexPath, animated: true);
+        print(quizzes[quizNames[indexPath.row]]!);
         quizToStart = QuizParser.parseJson(quizzes[quizNames[indexPath.row]]!);
         self.performSegue(withIdentifier: "StartQuiz", sender: nil);
     }

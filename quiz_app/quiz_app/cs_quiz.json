@@ -1,0 +1,36 @@
+{
+    "title":"Computer Science Basics",
+    "genre":"Education",
+    "questions" :
+    [
+     {
+     "query": "What language are iOS typically developed in?",
+     "correct_answer": "Swift",
+     "wrong_answers" : ["Java", "Python",
+                        "Html", "Typescript"]
+     
+     },
+     {
+     "query": "What color makes people dance uncontrollably?",
+     "correct_answer": "Green",
+     "wrong_answers" : ["Red", "Orange",
+                        "Yellow", "Green",
+                        "Blue", "Purple"]
+     },
+     {
+     "query": "Which of these courses is not required for a CS major at Duke?",
+     "correct_answer": "CS 308",
+     "wrong_answers" : ["CS 310", "CS 250", "CS 330", "CS 201"]
+     },
+     {
+     "query": "What do you use to make concurrent programs?",
+     "correct_answer": "Threads",
+     "wrong_answers": ["Multiple computers", "Biscuits", "Ask nicely", "Hope"]
+     },
+     {
+     "query": "How often does progress double according to Moore's Law?",
+     "correct_answer": "Every 18 months",
+     "wrong_answers": ["Every year", "Every 2 years", "It doesn't double regularly"]
+     }
+     ]
+}
