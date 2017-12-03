@@ -1,1 +1,2 @@
 # iso-independent-study-fall17
+In this step, we added a image to our assets folder through Xcode. We also added an imageview to our storyboard, and added the image from our assets folder into this imageview. ALong with this, we used the storyboard in order to set up auto constraints to ensure that our view will look right in any orientation/device. We also set up what a basic class in Swift will look like in Question.swift.
